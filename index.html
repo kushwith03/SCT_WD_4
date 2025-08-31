@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>kushwith_03</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Smart Task Manager</h1>
+        <p class="subtitle">Organize your tasks efficiently</p>
+      </header>
+
+      <div class="controls">
+        <div class="input-group">
+          <input type="text" id="taskInput" placeholder="Enter a new task..." />
+          <select id="categorySelect">
+            <option value="personal">Personal</option>
+            <option value="work">Work</option>
+            <option value="shopping">Shopping</option>
+            <option value="health">Health</option>
+            <option value="other">Other</option>
+          </select>
+          <input type="date" id="dueDate" />
+          <input type="time" id="dueTime" />
+          <button id="addTaskBtn">Add Task</button>
+        </div>
+
+        <div class="filter-section">
+          <button class="filter-btn active" data-filter="all">All Tasks</button>
+          <button class="filter-btn" data-filter="active">Active</button>
+          <button class="filter-btn" data-filter="completed">Completed</button>
+          <button class="filter-btn" data-filter="today">Due Today</button>
+        </div>
+      </div>
+
+      <div class="tasks-container">
+        <div class="tasks-header">
+          <div class="task-count" id="taskCount">0 tasks</div>
+          <select class="sort-select" id="sortSelect">
+            <option value="added">Added Date</option>
+            <option value="due">Due Date</option>
+            <option value="alpha">Alphabetical</option>
+            <option value="category">Category</option>
+          </select>
+        </div>
+
+        <ul class="task-list" id="taskList">
+          <div class="empty-state" id="emptyState">
+            <p>No tasks yet. Add a task to get started!</p>
+          </div>
+        </ul>
+      </div>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>

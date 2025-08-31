@@ -1,0 +1,261 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 15px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 800px;
+    overflow: hidden;
+}
+
+header {
+    background: linear-gradient(135deg, #5d67b2, #4a5699);
+    color: white;
+    padding: 1.5rem 2rem;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.subtitle {
+    opacity: 0.9;
+    font-size: 0.9rem;
+}
+
+.controls {
+    padding: 1.5rem;
+    background: #f8f9fa;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.input-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+input, select, button {
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+input:focus, select:focus {
+    outline: none;
+    border-color: #5d67b2;
+    box-shadow: 0 0 0 2px rgba(93, 103, 178, 0.2);
+}
+
+input {
+    flex: 1;
+}
+
+select {
+    width: 120px;
+}
+
+button {
+    background: #5d67b2;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 600;
+}
+
+button:hover {
+    background: #4a5699;
+    transform: translateY(-2px);
+}
+
+.filter-section {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    background: transparent;
+    color: #5d67b2;
+    border: 1px solid #5d67b2;
+    padding: 0.5rem 1rem;
+}
+
+.filter-btn.active {
+    background: #5d67b2;
+    color: white;
+}
+
+.tasks-container {
+    padding: 1.5rem;
+}
+
+.tasks-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #e9ecef;
+}
+
+.task-count {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.sort-select {
+    width: auto;
+    padding: 0.5rem;
+}
+
+.task-list {
+    list-style: none;
+}
+
+.task-item {
+    background: white;
+    border: 1px solid #e9ecef;
+    border-radius: 8px;
+    padding: 1rem;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    transition: all 0.3s ease;
+}
+
+.task-item:hover {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transform: translateY(-1px);
+}
+
+.task-checkbox {
+    margin-top: 3px;
+}
+
+.task-content {
+    flex: 1;
+}
+
+.task-title {
+    font-weight: 600;
+    margin-bottom: 5px;
+    word-break: break-word;
+}
+
+.task-due {
+    font-size: 0.85rem;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+.task-category {
+    display: inline-block;
+    background: #e9ecef;
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    color: #5d67b2;
+}
+
+.task-completed .task-title {
+    text-decoration: line-through;
+    color: #999;
+}
+
+.task-completed .task-category {
+    background: #d4edda;
+    color: #155724;
+}
+
+.task-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.action-btn {
+    background: transparent;
+    color: #666;
+    border: none;
+    padding: 0.5rem;
+    font-size: 1.1rem;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+}
+
+.action-btn:hover {
+    background: #f8f9fa;
+    color: #5d67b2;
+}
+
+.edit-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px solid #e9ecef;
+}
+
+.datetime-inputs {
+    display: flex;
+    gap: 10px;
+}
+
+.datetime-inputs input {
+    flex: 1;
+}
+
+.empty-state {
+    text-align: center;
+    padding: 3rem 1rem;
+    color: #999;
+}
+
+.empty-state p {
+    margin-bottom: 1rem;
+}
+
+@media (max-width: 600px) {
+    .input-group {
+        flex-direction: column;
+    }
+    
+    select, .datetime-inputs {
+        width: 100%;
+    }
+    
+    .filter-section {
+        flex-direction: column;
+    }
+    
+    .task-item {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .task-actions {
+        align-self: flex-end;
+    }
+}
